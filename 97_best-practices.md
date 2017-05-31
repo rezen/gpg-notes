@@ -1,6 +1,5 @@
 # Best Practices
 
-
 ## General
 - Use key sizes of 3kb+
 - Some people say 4Kb keys are unnecessaily large and too slow to use

@@ -1,3 +1,5 @@
+# Resources
+A whole heap of links to checkout!
 
 - https://www.esev.com/blog/post/2015-01-pgp-ssh-key-on-yubikey-neo/
 - https://www.youtube.com/watch?v=_DSa9n08_bg
@@ -18,3 +20,4 @@
 - http://notes.jerzygangi.com/the-best-pgp-tutorial-for-mac-os-x-ever/
 - https://ssd.eff.org/en/module/introduction-public-key-cryptography-and-pgp
 - https://ssd.eff.org/en/module/how-use-pgp-mac-os-x
+- https://blog.bugsnag.com/use-gpg-to-hide-rails-secrets/
