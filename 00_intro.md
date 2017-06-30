@@ -1,8 +1,25 @@
 # Introduction
+
+GPG is a cryptographic tool used primarily for encrypting content & for signing content others 
+need to validate the integrity of. It is a free open replacement for PGP.
+
+- https://en.wikipedia.org/wiki/GNU_Privacy_Guard
 - https://en.wikipedia.org/wiki/Pretty_Good_Privacy
 
 ## Web of Trust
+Embedded into the design of GPG is the notion of Web of Trust. A basic explanation
+is that users vouch for others identities and trust levels are established based on 
+relationships of others with those you trust. If you trust Alice, Mary & Frank who all
+vouch for Matt's indentity, you can trust Matt's indentity (pubkey) based on the your connection
+to Matt via Alice, Mary & Frank. This trust relationship helps build crediblity for an
+indentity. If no one vouched for Matt's indentity, you can't be sure if the public key
+is actually Matt's and not his alter-egos. However, if you have multiple people you explicitly 
+trust signing Matt's indentity that trust level goes up & you can be confident that the indentity (pubkey) is 
+indeed Matt's!
+
 - https://www.linux.com/learn/pgp-web-trust-core-concepts-behind-trusted-communication
+- https://www.linux.com/blog/pgp-web-trust-delegated-trust-and-keyservers
+- http://slides.com/mricon/pgp-web-of-trust
 - https://www.rubin.ch/pgp/weboftrust.en.html
 - https://www.youtube.com/watch?v=FmVLCsPVc1g
 - https://pthree.org/2014/12/31/keybase-and-the-pgp-web-of-trust/
@@ -14,8 +31,11 @@
 - The AES key is thrown away
 - Everything gets bundled up
 
+- https://en.wikipedia.org/wiki/Key_signing_party
 
-## Generate your key
+
+## Using
+### Generate your key
 `gpg --gen-key`  
 
 *Options*  
@@ -24,7 +44,7 @@
 - Expires in `1y`
 - Create a passphrase
 
-## Basics
+### Basics
 ```shell
 # Let us make sure gpg is installed!
 gpg --version
@@ -45,7 +65,7 @@ gpg --armor --export username@email.com
 echo '!! SECRET !!' > secret.txt
 
 # Encrypt a secret
-gpg --encrypt --local-user "username@email.com" --recipient "username@email.com" secret.txt
+gpg --encrypt --local-user "username@email.com" --recipient "otherusername@email.com" secret.txt
 gpg -e -u "username@email.com" -r "otherusername@email.com" secret.txt
 
 # Descrypt that secret!
@@ -53,12 +73,16 @@ gpg --output plain-secret.txt --decrypt secret.txt.gpg
 ```
 
 
-## Sharing Keys
+### Sharing Keys
 ```shell
+# Share your key with others!
+gpg --export -a -o myemail.asc
+
+# Import others keys!
 gpg --import otheruser@email.com.asc
 ```
 
-## Signing
+### Signing
 With file or message signing with gpg you can validate the sender
 sent the message as well as validate that the message contents have
 not changed.
@@ -86,15 +110,15 @@ stat secret.txt.sig
 gpg --verify secret.txt.sig secret.txt
 ```
 
-## Subkeys
+### Subkeys
 - https://www.void.gr/kargig/blog/2013/12/02/creating-a-new-gpg-key-with-subkeys/
 - https://alexcabal.com/creating-the-perfect-gpg-keypair/
 - http://www.connexer.com/articles/openpgp-subkeys
 
+
 ## Asides
 - https://blog.filippo.io/giving-up-on-long-term-pgp/
 - http://secushare.org/PGP
-
 
 ## Contributors
 - Justin Stevens
