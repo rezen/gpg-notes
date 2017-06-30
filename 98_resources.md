@@ -21,3 +21,6 @@ A whole heap of links to checkout!
 - https://ssd.eff.org/en/module/introduction-public-key-cryptography-and-pgp
 - https://ssd.eff.org/en/module/how-use-pgp-mac-os-x
 - https://blog.bugsnag.com/use-gpg-to-hide-rails-secrets/
+- https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/
+- https://www.nas.nasa.gov/hecc/support/kb/using-gpg-to-encrypt-your-data_242.html
+- http://www.integralist.co.uk/posts/security-basics.html
