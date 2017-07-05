@@ -82,6 +82,25 @@ gpg --export -a -o myemail.asc
 gpg --import otheruser@email.com.asc
 ```
 
+#### Signing Keys
+Signing another person's key is how you vouch for that person. You sign their key and give back 
+a signed key they can show others that you vouched for their indentity!
+
+```shell
+# Will ask for level you certify trust of key
+gpg --ask-cert-level --sign-key otheruser@email.com
+gpg --list-sigs otheruser@email.com
+
+# Export their key, which now includes your signature
+gpg --export --armor otheruser@email.com
+
+# To trust only for your local usage but not vouch you can sign locally
+gpg --lsign-key  otheruser@email.com
+```
+
+- https://futureboy.us/pgp.html#SigningKeysInGPG
+
+
 ### Signing
 With file or message signing with gpg you can validate the sender
 sent the message as well as validate that the message contents have
