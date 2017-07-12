@@ -8,7 +8,7 @@ echo '# Table of Contents' > README.md
 
 for file in $markdown
 do
-   heading=$(head -n1 $file)
+   heading=$(head -n1 "$file")
    
    if [[ $heading == "" ]]
    then
@@ -16,7 +16,6 @@ do
      continue
    fi
 
-   file_fixed=$(echo $file | sed 's|./||')
    text=$(echo "$heading" | cut -d'#' -f2 | sed 's/^ *//')
-   echo  "- [$text]($file_fixed)" >> README.md
+   echo  "- [$text](${file//.\//})" >> README.md
 done
