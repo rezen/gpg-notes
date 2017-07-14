@@ -6,6 +6,8 @@
 - https://www.passwordstore.org/
 - https://www.vaultproject.io/docs/concepts/pgp-gpg-keybase.html
 - https://keybase.io/
+- https://github.com/chrissimpkins/crypto
+
 
 ## Libraries
 - https://pythonhosted.org/python-gnupg/
