@@ -25,3 +25,4 @@ has not been manipulated by someone else in transit.
 - https://confluence.atlassian.com/sourcetreekb/setup-gpg-to-sign-commits-within-sourcetree-765397791.html
 - https://harryrschwartz.com/2014/11/01/automatically-signing-your-git-commits.html
 - https://medium.com/@timmywil/sign-your-commits-on-github-with-gpg-566f07762a43
+- https://blog.erincall.com/p/signing-your-git-commits-with-gpg
