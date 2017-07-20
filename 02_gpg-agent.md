@@ -36,6 +36,8 @@ agent_socket=~/.gnupg/S-gpg-agent
 ssh -R $agent_socket:$agent_socket -o "StreamLocalBindUnlink=yes" -l username 192.168.1.9
 ```
 
+- https://blog.flameeyes.eu/2016/10/gnupg-agent-forwarding-with-openpgp-cards/
 - https://superuser.com/questions/161973/how-can-i-forward-a-gpg-key-via-ssh-agent
 - http://code.v.igoro.us/posts/2015/11/remote-gpg-agent.html
+- http://blog.ktdreyer.com/2017/06/forwarding-gpg-agent-to-container.html
 - http://blog.ktdreyer.com/2017/06/forwarding-gpg-agent-to-container.html
